@@ -15,38 +15,38 @@ class Login extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(Assets.login_backround),
-            fit: BoxFit.cover,
-          ),
-        ),
+       color: Color(0xff000421),
         child: Padding(
           padding: EdgeInsets.only(
-            top: screenHeight * 0.02,
-            left: screenWidth * 0.08,
-            right: screenWidth * 0.08,
+
+            left: screenWidth * 0.1,
+            right: screenWidth * 0.1,
           ),
           child: Column(
             children: [
+              SizedBox(
+                height: screenHeight * 0.11,
+              ),
               Text(
                 AppStrings.login,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 30,
+                  fontSize: 50,
                   decoration: TextDecoration.none,
                 ),
               ),
               Text(
                 AppStrings.create_an_account,
                 style: TextStyle(
-                  color: Colors.white.withOpacity(0.8),
+                  color: Colors.white.withOpacity(0.6),
                   fontWeight: FontWeight.w300,
                   fontSize: 15,
                   decoration: TextDecoration.none,
                 ),
               ),
-              SizedBox(height: screenHeight * 0.22),
+              SizedBox(
+                height: screenHeight * 0.09,
+              ),
               LoginFormWidget()
             ],
           ),

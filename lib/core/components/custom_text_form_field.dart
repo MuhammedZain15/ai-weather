@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
-    required this.validation,
+     this.validation,
     required this.filledColor,
     required this.obscured,
     required this.controller,
   });
 
-  final FormFieldValidator<String> validation;
+  final FormFieldValidator<String>? validation;
   final Color? filledColor;
   final bool obscured;
   final TextEditingController controller;

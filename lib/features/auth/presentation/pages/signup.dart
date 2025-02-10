@@ -1,3 +1,5 @@
+import 'package:ai_weather/core/utils/app_strings.dart';
+import 'package:ai_weather/features/auth/presentation/widgets/signup_form_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/assets.dart';
@@ -5,24 +7,50 @@ import '../../../../core/utils/assets.dart';
 class Signup extends StatelessWidget {
   const Signup({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
-    return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(
-            Assets.signup_backround,
-          ),
-          fit: BoxFit.cover,
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: Container(
+        decoration: BoxDecoration(
+          color: Color(0xff000421),
         ),
-      ),
-      child: Padding(
-        padding: EdgeInsets.only(
-          bottom: screenHeight * 0.15,
-          left: screenWidth * 0.08,
-          right: screenWidth * 0.08,
+        child: Padding(
+          padding: EdgeInsets.only(
+            left: screenWidth * 0.1,
+            right: screenWidth * 0.1,
+          ),
+          child: Column(
+            children: [
+              SizedBox(
+                height: screenHeight * 0.11,
+              ),
+              Text(
+                AppStrings.signup,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 50,
+                  decoration: TextDecoration.none,
+                ),
+              ),
+              Text(
+                AppStrings.create_an_account,
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.6),
+                  fontWeight: FontWeight.w300,
+                  fontSize: 15,
+                  decoration: TextDecoration.none,
+                ),
+              ),
+            SizedBox(
+              height: screenHeight * 0.03,
+            ),
+              SignupFormWidget(),
+            ],
+          ),
         ),
       ),
     );
