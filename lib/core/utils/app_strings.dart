@@ -1,6 +1,6 @@
 class AppStrings {
   static const String login = 'Log In';
-  static const String signup = 'Sign up';
+  static const String signup = 'Sign UP';
   static const String create_an_account = 'CREATE AN ACCOUNT TO MAKE SDFSDF';
   static const String email = 'Email';
   static const String password = 'Password';
