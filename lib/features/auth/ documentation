@@ -1,0 +1,37 @@
+Documentation for Login and Signup Features in Flutter (Using Firebase, Bloc, and Clean Architecture)
+Login Feature
+
+The login feature allows users to sign in to the application using their credentials. It includes Firebase Authentication for secure user login.
+Steps:
+1. User Input:
+   - The user provides their email and password on the login page.
+2. Firebase Authentication:
+   - Firebase authentication is used to verify the user's credentials.
+3. Bloc Implementation:
+   - A Bloc pattern is used to handle the state and manage the login process.
+4. Error Handling:
+   - If the login fails (incorrect credentials), an error message is shown to the user.
+5. Navigation:
+   - On successful login, the user is navigated to the home screen
+   .
+Signup Feature
+The signup feature allows users to create a new account. It includes Firebase Authentication for account creation and Cloud Firestore for storing additional user details such as username, email, and user ID.
+Steps:
+1. User Input:
+   - The user provides their username, email, and password on the signup page.
+2. Firebase Authentication:
+   - Firebase authentication is used to create a new account with the user's email and password.
+3. Cloud Firestore:
+   - After the account is created, the additional user information (username and user ID) is stored in Cloud Firestore.
+4. Bloc Implementation:
+   - A Bloc pattern is used to manage the state of the signup process.
+5. Error Handling:
+   - If there is an error during signup (e.g., email already in use), the user will receive an error message.
+6. Navigation:
+   - Upon successful signup, the user is navigated to the login page or the home screen.
+
+Architecture
+Clean Architecture: Both the login and signup features follow Clean Architecture principles.
+- Presentation Layer: Handles UI and state management using Bloc.
+- Domain Layer: Contains the business logic and use cases.
+- Data Layer: Manages the Firebase Authentication and Cloud Firestore interactions.
