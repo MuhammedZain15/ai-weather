@@ -13,15 +13,15 @@ class Login extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: Container(
-       color: Color(0xff000421),
-        child: Padding(
-          padding: EdgeInsets.only(
-
-            left: screenWidth * 0.1,
-            right: screenWidth * 0.1,
-          ),
+      backgroundColor: Color(0xff000421),
+      resizeToAvoidBottomInset: true,
+      body: Padding(
+        padding: EdgeInsets.only(
+      
+          left: screenWidth * 0.1,
+          right: screenWidth * 0.1,
+        ),
+        child: SingleChildScrollView(
           child: Column(
             children: [
               SizedBox(

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
-     this.validation,
+    this.validation,
     required this.filledColor,
     required this.obscured,
     required this.controller,
@@ -17,12 +17,13 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      textInputAction: TextInputAction.next,
       controller: controller,
       obscureText: obscured,
       validator: validation,
       cursorHeight: 30,
       style: const TextStyle(
-        color: Colors.black,
+        color: Colors.white,
         fontSize: 16,
         fontWeight: FontWeight.w600,
       ),
