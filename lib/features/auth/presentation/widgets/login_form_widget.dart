@@ -8,7 +8,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/utils/app_strings.dart';
 
 class LoginFormWidget extends StatefulWidget {
-  LoginFormWidget({super.key});
+ const LoginFormWidget({super.key});
 
   @override
   State<LoginFormWidget> createState() => _LoginFormWidgetState();
