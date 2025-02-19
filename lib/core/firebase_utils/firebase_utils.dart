@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../features/auth/domain/entities/user_data.dart';
 
 class FirebaseAuthService {
@@ -26,6 +27,10 @@ class FirebaseAuthService {
             .collection(UserData.collectionName)
             .doc(user.uid)
             .set(userData.toJson());
+
+        // حفظ الـ userId في SharedPreferences
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setString('userId', user.uid);
       }
       return user;
     } catch (e) {
@@ -39,10 +44,12 @@ class FirebaseAuthService {
         email: email,
         password: password,
       );
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('userId', userCredential.user!.uid);
+
       return userCredential.user;
     } catch (e) {
       throw Exception(e.toString());
     }
   }
-
 }

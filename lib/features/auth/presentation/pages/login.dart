@@ -1,4 +1,3 @@
-import 'package:ai_weather/core/utils/assets.dart';
 import 'package:ai_weather/features/auth/presentation/widgets/login_form_widget.dart';
 import 'package:flutter/material.dart';
 
