@@ -2,6 +2,7 @@ import 'package:ai_weather/core/app_router/app_router.dart';
 import 'package:ai_weather/features/home/domain/entities/ResponseEntity.dart';
 import 'package:ai_weather/features/home/presentation/manager/user_name_cubit/user_cubit.dart';
 import 'package:ai_weather/features/home/presentation/widgets/custom_item.dart';
+import 'package:ai_weather/features/home/presentation/widgets/prediction_widget.dart';
 import 'package:ai_weather/features/home/presentation/widgets/weather_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -166,7 +167,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                 ],
               ),
               SizedBox(
-                height: screenHeight * 0.1,
+                height: screenHeight * 0.02,
               ),
               Center(
                 child: ElevatedButton(
@@ -185,6 +186,14 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                       fontSize: 18,
                     ),
                   ),
+                ),
+              ),
+              SizedBox(
+                height: screenHeight * 0.001,
+              ),
+              Center(
+                child: PredictionWidget(
+                  weatherData: widget.responseEntity,
                 ),
               )
             ],
