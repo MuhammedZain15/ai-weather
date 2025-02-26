@@ -4,13 +4,22 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+CLone the repo and Local host the Ai Model by following these Instrcutions:
 
-A few resources to get you started if this is your first Flutter project:
+1-Run these commands in the terminal
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+python -m venv venv
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ venv/bin/activate //MAC
+
+ venv/Scripts/activate. // Windows
+
+pip install Flask
+
+pip show Flask
+
+pip install numpy
+
+pip install scikit-learn==1.3.2
+
+python app.py
