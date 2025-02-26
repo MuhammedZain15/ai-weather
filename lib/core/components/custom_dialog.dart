@@ -14,20 +14,25 @@ class CustomDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Dialog(
-
       backgroundColor: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             isGood
                 ? const Icon(Icons.sunny, color: Colors.amber, size: 80)
-                : Image.asset("assets/images/bad_weather.jpeg",height: 150,),
+                : Image.asset(
+                    "assets/images/bad_weather.jpeg",
+                    height: screenHeight * 0.15,
+                  ),
+
             const SizedBox(height: 16),
 
             // Prediction Message
@@ -50,8 +55,10 @@ class CustomDialog extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                padding: EdgeInsets.symmetric(
+                  horizontal: screenWidth * 0.02,
+                  vertical: screenHeight * 0.01,
+                ),
               ),
               child: const Text(
                 "OK",
