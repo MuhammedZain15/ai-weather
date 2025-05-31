@@ -40,7 +40,7 @@ The project follows a clean architecture approach, separating concerns into dist
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/MuhammedZain15/ai-weather.git
 cd ai_weather
 ```
 
